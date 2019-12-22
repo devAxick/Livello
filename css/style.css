@@ -70,12 +70,169 @@ body{
 }
 
 .mainArrow{
-    top: 0;
     position: absolute;
+    left: 50%;
+    bottom: 47px;
+}
+
+.mainArrow:before, .mainArrow:after{
+    content: '';
     display: block;
-    width: 40px;
-    height: 40px;
-    border-left: 7px solid;
-    border-bottom: 7px solid;
-    border-color: #fff;
+    width: 26px;
+    height: 8px;
+    background-color: white;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mainArrow:before{
+    transform: rotateZ(-45deg);
+    transform-origin: 4px 50%;
+}
+
+.mainArrow:after{
+    transform: rotateZ(-135deg);
+    transform-origin: 4px 50%;
+}
+
+
+/*gender filter section*/
+
+#genderFilter{
+    background-color: #f5f6f7;
+    max-height: 145px;
+}
+
+.wrapper-genderFilter{
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0;
+}
+
+.gender-wrap{
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-button--sade label:before, .btn-all-prod{
+    font-family: Quicksand;
+    font-weight: bold;
+}
+
+.btn-all-prod{
+    height: 50px;
+    width: 205px;
+    background: #aa9b77;
+    box-shadow: none;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/*man-wear section*/
+
+.wrapper-men-wear{
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header-with-line{
+    display: flex;
+    align-items: center;
+    margin: 85px 0;
+}
+
+.section-header-with-line h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 45px;
+}
+
+.section-header-with-line hr{
+    border: 1px solid #cccccc;
+    width: 100%;
+}
+
+/*wear-list and items*/
+
+.wear-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wear-item{
+    max-width: 320px;
+    width: 100%;
+    max-height: 380px;
+    border: 6px solid #aa9b77;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.size-list{
+    position: relative;
+    overflow: hidden;
+    height: 64px;
+}
+
+.size-list li{
+    position: absolute;
+}
+
+.size-list li:first-child{
+    position: relative;
+}
+
+.size-list li:first-child:after, .size-list li:first-child:before{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 11px;
+    height: 3px;
+    background: #aa9b77;
+    border-radius: 2px;
+    transform-origin: 0 50%;
+    right: -21px;
+    top: 12px;
+}
+
+.size-list li:first-child:after{
+    transform: rotateZ(-125deg) translateX(-1px) translateY(1px);
+}
+
+.size-list li:first-child:before{
+    transform: rotateZ(-55deg);
+}
+
+.sizes-colors{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-list{
+    display: flex;
+}
+
+.color{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
 }

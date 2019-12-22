@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/checkbox.css">
 
     <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <script src="https://kit.fontawesome.com/484ad613ba.js"></script>
@@ -31,7 +32,67 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias blanditiis dicta doloribus error eveniet incidunt ipsa magnam officiis praesentium, provident qui quisquam, rerum saepe soluta, suscipit unde veritatis voluptates?</p>
         </header>
 
-        <span class="mainArrow"></span>
+        <span class="mainArrow">
+        </span>
+    </section>
+
+    <!--=============================================================-->
+
+    <section id="genderFilter">
+        <div class="wrapper-genderFilter">
+            <div class="gender-wrap">
+                <div class="toggle-button toggle-button--sade">
+                    <input id="men" type="checkbox" >
+                    <label for="men" data-on-text="men"></label>
+                    <div class="toggle-button__icon"></div>
+                </div>
+                <div class="toggle-button toggle-button--sade">
+                    <input id="women" type="checkbox" >
+                    <label for="women" data-on-text="women"></label>
+                    <div class="toggle-button__icon"></div>
+                </div>
+                <div class="toggle-button toggle-button--sade">
+                    <input id="children" type="checkbox" >
+                    <label for="children" data-on-text="children"></label>
+                    <div class="toggle-button__icon"></div>
+                </div>
+            </div>
+
+            <button class="btn-all-prod">see all products</button>
+        </div>
+    </section>
+
+    <!--=============================================================-->
+
+    <section id="men-wear">
+        <div class="wrapper-men-wear">
+            <header class="section-header-with-line">
+                <h3>men</h3>
+                <hr>
+            </header>
+
+            <div class="wear-list">
+                <div class="wear-item">
+                    <div class="sizes-colors">
+                        <ol class="size-list">
+                            <li>size</li>
+                            <li>M</li>
+                            <li>L</li>
+                            <li>XL</li>
+                        </ol>
+                        <ol class="color-list">
+                            <li class="color" style="background: yellow"></li>
+                            <li class="color" style="background: blue"></li>
+                            <li class="color" style="background: violet"></li>
+                        </ol>
+                    </div>
+                    <img src="./img/wears/t-shirt.jpg" alt="t-shirt">
+                    <div class="name-price">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
