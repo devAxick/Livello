@@ -3,9 +3,11 @@ $(document).ready(function () {
 });
 
 function toggleList(list) {
-    $(list[0].children).map((index, item)=>{
-        if(index != 0){
-            $(item).css('top', `${$(item).height() * (index)}px`)
-        }
+    list.map((index)=>{
+        $(list[index].children).map((index, item)=>{
+            if(index != 0){
+                $(item).css('top', `${$(item).height() * (index)}px`)
+            }
+        });
     });
 }
