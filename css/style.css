@@ -185,8 +185,6 @@ body{
 
 .size-list{
     position: relative;
-    overflow: hidden;
-    height: 64px;
 }
 
 .size-list li{
@@ -194,7 +192,10 @@ body{
 }
 
 .size-list li:first-child{
-    position: relative;
+    background: white;
+    z-index: 5;
+    cursor: pointer;
+    width: 50px;
 }
 
 .size-list li:first-child:after, .size-list li:first-child:before{
@@ -206,7 +207,7 @@ body{
     background: #aa9b77;
     border-radius: 2px;
     transform-origin: 0 50%;
-    right: -21px;
+    right: 0px;
     top: 12px;
 }
 
