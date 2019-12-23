@@ -1,10 +1,18 @@
 import React from 'react';
-import MainScreen from './components/MainScreen';
+import Home from './components/_Homepage/Home';
+import Product from "./components/_Productpage/Product";
+
+import {Switch, Route} from 'react-router-dom';
+import './css/reset.css';
+import  './css/fonts.css';
 import './App.css';
 
 function App() {
   return (
-    <MainScreen />
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route path='/product' component={Product}/>
+      </Switch>
   );
 }
 

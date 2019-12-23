@@ -1,0 +1,17 @@
+.section-header-with-line{
+    display: flex;
+    align-items: center;
+    margin: 85px 0;
+}
+
+.section-header-with-line h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 45px;
+}
+
+.section-header-with-line hr{
+    border: 1px solid #cccccc;
+    width: 100%;
+}

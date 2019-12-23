@@ -1,0 +1,37 @@
+#mainMenu{
+    display: flex;
+    justify-content: space-between;
+    /*padding-top: 40px;*/
+    padding: 40px 65px 0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#mainMenu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all .4s;
+}
+
+#mainMenu a:hover{
+    color: #aa9b77;
+}
+
+#mainMenu>span a{
+    flex-grow: 1;
+    font-size: 40px;
+}
+
+#mainMenu ul{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#mainMenu ul li{
+    margin: 5px;
+    margin-left: 50px;
+}

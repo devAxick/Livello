@@ -1,0 +1,131 @@
+:root{
+    --size-checkbox: 24px;
+    --color-checked: #aa9b77;
+}
+
+
+.toggle-button {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-button label {
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: left;
+}
+
+.toggle-button input {
+    display: none;
+}
+
+.toggle-button__icon {
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.toggle-button__icon:before, .toggle-button__icon:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    transition: 0.2s ease-out;
+}
+
+
+
+
+
+
+.toggle-button--sade label {
+    width: 24px;
+    height: 24px;
+    line-height: var(--size-checkbox);
+    background: #f5f6f7;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    border: 3px solid #b0acab;
+    box-sizing: border-box;
+}
+
+.toggle-button--sade label:before, .toggle-button--sade label:after {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    transition: all 0.2s .1s ease-out;
+}
+
+.toggle-button--sade label:before {
+    white-space: pre;
+    content: attr(data-on-text);
+}
+
+.toggle-button--sade input[type=checkbox]:checked ~ label{
+    border: 3px solid var(--color-checked);
+}
+
+.toggle-button--sade input[type=checkbox]:checked ~ .toggle-button__icon:before, .toggle-button--sade input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    background: var(--color-checked);
+}
+
+.toggle-button--sade input[type=checkbox]:checked ~ .toggle-button__icon:before {
+    transform: translate(-30%, 70%) rotate(45deg) scale(0.7, 1);
+}
+
+.toggle-button--sade input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    transform: translate(20%) rotate(-45deg);
+}
+
+.toggle-button--sade .toggle-button__icon {
+    position: absolute;
+    height: var(--size-checkbox);
+    width: var(--size-checkbox);
+    top: 0;
+    left: 0;
+}
+
+.toggle-button--sade .toggle-button__icon:before, .toggle-button--sade .toggle-button__icon:after {
+    width: calc(var(--size-checkbox) - 8px);
+    height: 3px;
+    border-radius: 3px;
+    /*box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);*/
+    margin-left: -4px;
+    top: 44%;
+    background:  none;
+}
+
+.toggle-button--sade .toggle-button__icon:before {
+    transform: rotate(45deg);
+}
+
+.toggle-button--sade .toggle-button__icon:after {
+    transform: rotate(-45deg);
+}
+
+.toggle-button--sade:hover label {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/*.toggle-button--sade:hover input[type=checkbox]:not(:checked) ~ .toggle-button__icon:before {*/
+/*    animation: icon-hover-before .2s;*/
+/*}*/
+
+/*.toggle-button--sade:hover input[type=checkbox]:not(:checked) ~ .toggle-button__icon:after {*/
+/*    animation: icon-hover-after .2s;*/
+/*}*/
+
+
+@keyframes icon-hover-before {
+    0% {
+        transform: rotate(45deg) scale(1, 1); }
+    100% {
+        transform: rotate(45deg) scale(1.2, 1.2); } }
+
+@keyframes icon-hover-after {
+    0% {
+        transform: rotate(-45deg) scale(1, 1); }
+    50% {
+        transform: rotate(-45deg) scale(1.2, 1.2); } }

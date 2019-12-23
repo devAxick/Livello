@@ -1,16 +1,11 @@
 import React,{Component} from 'react';
+import MainMenu from '../../main-menu/MainMenu';
+import './MainScreen.css';
 
 export default function () {
     return(
         <section id="mainScrImg">
-            <nav id="mainMenu">
-                <span><a href="#"><i className="fas fa-mountain"></i></a></span>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#"><i className="fas fa-shopping-cart"></i></a></li>
-                </ul>
-            </nav>
+            <MainMenu />
             <header>
                 <h1>Livello</h1>
                 <span>Our clothing - your comfort</span>
