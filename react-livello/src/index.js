@@ -5,10 +5,21 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
 
+import {Provider} from 'react-redux';
+import {createStore} from "redux";
+import rootReducer from './reducers/index'
+
+const store = createStore(rootReducer);
+
+
+// mongoose.connect("mongodb://localhost/muggers-db");
+
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>
     ,
     document.getElementById('root'));
 

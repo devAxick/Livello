@@ -1,0 +1,55 @@
+.slider-navigation{
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.slider-navigation span{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nxt-btn, .prev-btn{
+    background: none;
+    box-shadow: none;
+    border: none;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+
+.nxt-btn:before, .prev-btn:before, .nxt-btn:after, .prev-btn:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #aa9b77;
+}
+
+.nxt-btn:before, .nxt-btn:after{
+    transform-origin: 100% 50%;
+}
+
+.prev-btn:before, .prev-btn:after{
+    transform-origin: 0 50%;
+}
+
+.prev-btn:before{
+    transform: rotateZ(35deg) translateX(1px) translateY(-1px);
+}
+
+.prev-btn:after{
+    transform: rotateZ(-35deg) translateX(1px) translateY(1px);
+}
+
+.nxt-btn:before{
+    transform: rotateZ(35deg) translateX(-10px) translateY(8px);
+}
+
+.nxt-btn:after{
+    transform: rotateZ(-35deg) translateX(-10px) translateY(-7px);
+}

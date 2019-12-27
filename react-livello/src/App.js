@@ -7,6 +7,8 @@ import './css/reset.css';
 import  './css/fonts.css';
 import './App.css';
 
+import { connect } from 'react-redux';
+
 function App() {
   return (
       <Switch>
@@ -16,4 +18,10 @@ function App() {
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        user: state.info
+    }
+}
+
+export default connect(mapStateToProps)(App);
