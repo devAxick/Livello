@@ -1,34 +1,34 @@
 const express = require('express');
 const route = express.Router();
-const Mugger = require('./mugger');
+const Wear = require('./wearSchema');
 
-route.get('/mugger', (req, res) => {
-   Mugger.find({})
-       .then(mugger => {
-           res.send(mugger)
+route.get('/wear', (req, res) => {
+   Wear.find({})
+       .then(wearItem => {
+           res.send(wearItem)
        })
 });
 
-route.post('/mugger', (req, res) => {
-    Mugger.create(req.body)
-        .then(mugger => {
-            res.send(mugger)
+route.post('/wear', (req, res) => {
+    Wear.create(req.body)
+        .then(wearItem => {
+            res.send(wearItem)
         })
 });
 
-route.put('/mugger/:id', (req, res) => {
-    Mugger.findByIdAndUpdate({_id: req.params.id}, req.body)
+route.put('/wear/:id', (req, res) => {
+    Wear.findByIdAndUpdate({_id: req.params.id}, req.body)
         .then(() => {
             Mugger.findOne({_id: req.params.id})
-                .then(mugger => {
-                    res.send(mugger)
+                .then(wearItem => {
+                    res.send(wearItem)
                 })
 
         })
 });
 
-route.delete('/mugger/:id', (req, res) => {
-    Mugger.findByIdAndDelete({_id: req.params.id})
+route.delete('/wear/:id', (req, res) => {
+    Wear.findByIdAndDelete({_id: req.params.id})
         .then(res.send('deleted'))
 });
 

@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {wear} from "./person";
+import wear from "./wear";
 
 const rootReducer = combineReducers({
     wear

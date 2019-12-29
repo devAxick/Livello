@@ -9,7 +9,7 @@ export default function () {
         <React.Fragment>
             <Section_MainScreen />
             <Section_GenderFilter />
-            <Section_WearCarousel/>
+            {/*<Section_WearCarousel/>*/}
         </React.Fragment>
     )
 }
