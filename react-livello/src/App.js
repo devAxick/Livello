@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Home from './components/_Homepage/Home';
 import Product from "./components/_Productpage/Product";
 
 import {Switch, Route} from 'react-router-dom';
+
 import './css/reset.css';
 import  './css/fonts.css';
 import './App.css';
 
-import { connect } from 'react-redux';
 
 function App() {
   return (
@@ -18,10 +18,5 @@ function App() {
   );
 }
 
-function mapStateToProps(state) {
-    return {
-        user: state.info
-    }
-}
 
-export default connect(mapStateToProps)(App);
+export default App;

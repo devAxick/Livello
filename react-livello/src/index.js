@@ -5,21 +5,26 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
 
+import thunk from "redux-thunk";
+import {composeWithDevTools} from "redux-devtools-extension";
 import {Provider} from 'react-redux';
-import {createStore} from "redux";
+import {createStore, applyMiddleware} from "redux";
 import rootReducer from './reducers/index'
+import WearItem from "./components/_Homepage/section-wear-corusel/wear-list/wear-item/WearItem";
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 
-// mongoose.connect("mongodb://localhost/muggers-db");
 
 ReactDOM.render(
-    <Provider store={store}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </Provider>
+    <React.Fragment>
+        {/*<BrowserRouter>*/}
+        {/*    <App />*/}
+        {/*</BrowserRouter>*/}
+        <Provider store={store}>
+            <WearItem/>
+        </Provider>
+    </React.Fragment>
     ,
     document.getElementById('root'));
 

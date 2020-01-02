@@ -1,8 +1,8 @@
 import {combineReducers} from "redux";
-import info from "./info";
+import wear from "./info";
 
 const rootReducer =  combineReducers({
-    info
+    wear
 });
 
 export default rootReducer;
