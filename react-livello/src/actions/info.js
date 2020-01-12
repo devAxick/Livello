@@ -1,11 +1,13 @@
-function wearFetchInfoSuccess(wear) {
+
+
+export function wearFetchInfoSuccess(wear) {
     return({
         type: "INFO_FETCH_SUCCESS",
-        payload: wear
+        wear
     })
 }
 
-export default function wearFetchInfo(url) {
+export function wearFetchInfo(url) {
     return (dispatch) => {
         fetch(url)
             .then((response) => {

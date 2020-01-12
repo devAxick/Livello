@@ -1,14 +1,26 @@
-import React from "react";
-import './SlidreNavigation.css';
+import React, {useState} from "react";
+import style from'./SlidreNavigation.module.css';
 
-export default function () {
+export default function (props) {
+    const [count, setCount] = useState(1);
+
+    function setCounter(expr){
+        if((count + expr) <= 0){
+            setCount(0)
+        }else{
+            setCount(count + expr)
+        }
+    }
+
     return(
-        <div className="slider-navigation">
-            <span>1/5</span>
-            <span>
-                    <button className="prev-btn"/>
-                    <button className="nxt-btn"/>
-                </span>
+        <div className={style.sliderNavigation}>
+            <span>{count}</span>
+            <div className={style.btnWrapper}>
+                    <button className={style.prevBtn} onClick={() => setCounter(+1)}/>
+                    <button className={style.nxtBtn} onClick={() => setCounter(-1)}/>
+            </div>
         </div>
     )
 }
+
+// {props.amount}

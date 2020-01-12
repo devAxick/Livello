@@ -1,8 +1,10 @@
 import {combineReducers} from "redux";
-import wear from "./info";
+import {wearList} from "./info";
+import {countWears} from "./countWears";
 
 const rootReducer =  combineReducers({
-    wear
+    wearList: wearList,
+    countWears: countWears
 });
 
 export default rootReducer;

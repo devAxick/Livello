@@ -1,27 +1,30 @@
-.slider-navigation{
+.sliderNavigation{
     align-self: flex-end;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
     margin-bottom: 15px;
+    width: 25px;
 }
 
-.slider-navigation span{
+.btnWrapper{
     display: flex;
     justify-content: space-between;
 }
 
 
-.nxt-btn, .prev-btn{
+.nxtBtn, .prevBtn{
+    width: 15px;
     background: none;
     box-shadow: none;
     border: none;
-    width: 0;
-    height: 0;
+    width: 50%;
+    height: 100%;
     padding: 0;
 }
 
-.nxt-btn:before, .prev-btn:before, .nxt-btn:after, .prev-btn:after{
+.nxtBtn:before, .prevBtn:before, .nxtBtn:after, .prevBtn:after{
     content: '';
     position: absolute;
     display: block;
@@ -30,26 +33,26 @@
     background: #aa9b77;
 }
 
-.nxt-btn:before, .nxt-btn:after{
-    transform-origin: 100% 50%;
-}
-
-.prev-btn:before, .prev-btn:after{
+.nxtBtn:before, .nxtBtn:after{
     transform-origin: 0 50%;
 }
 
-.prev-btn:before{
+.prevBtn:before, .prevBtn:after{
+    transform-origin: 100% 50%;
+}
+
+.prevBtn:before{
     transform: rotateZ(35deg) translateX(1px) translateY(-1px);
 }
 
-.prev-btn:after{
+.prevBtn:after{
     transform: rotateZ(-35deg) translateX(1px) translateY(1px);
 }
 
-.nxt-btn:before{
+.nxtBtn:before{
     transform: rotateZ(35deg) translateX(-10px) translateY(8px);
 }
 
-.nxt-btn:after{
+.nxtBtn:after{
     transform: rotateZ(-35deg) translateX(-10px) translateY(-7px);
 }

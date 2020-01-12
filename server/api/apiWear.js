@@ -1,9 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const Wear = require('./wear');
+const Wear = require('../mongoose schemas/wear');
+
+
+router.get('/weari', (req, res) => {
+    Wear.countDocuments({}, (err, count) =>{
+        res.send({count: count})
+    })
+});
 
 router.get('/wear', (req, res) => {
-    res.send({method: "GET"})
+    Wear.find({})
+        .then(wear => res.send(wear))
 });
 
 router.post('/wear', (req, res) => {
