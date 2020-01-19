@@ -5,17 +5,17 @@ const WearSchema = new Schema(
     {
         type: String,
         name: String,
+        article: String,
         brand: String,
-        size: {
-            EU: Number,
-            US: Number,
-            UK: Number,
-            cm: Number
-        },
+        size: String,
         color: String,
         season: Array,
         description: String,
-        images: Array
+        images: Array,
+        destination: String,
+        gender: Array,
+        price: String,
+        discount: String
     }
 );
 

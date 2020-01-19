@@ -10,7 +10,11 @@ const BackpackSchema = new Schema(
         color: String,
         season: Array,
         description: String,
-        images: Array
+        images: Array,
+        gender: Array,
+        material: Array,
+        price: String,
+        discount: String
     }
 );
 

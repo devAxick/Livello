@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './WearItem.module.css';
+import SizeList from "./size-list/SizeList";
 
 class WearItem extends React.Component {
 
@@ -9,13 +10,8 @@ class WearItem extends React.Component {
 
         return(
             <div className={styles.wearItem}>
-                <div className="sizes-colors">
-                    <ol className="size-list">
-                        <li>size</li>
-                        <li>M</li>
-                        <li>L</li>
-                        <li>xl</li>
-                    </ol>
+                <div className={styles.sizesColors}>
+                    <SizeList sizeList={[37,38,39]}/>
 
                     {/*<ol className="color-list">*/}
                     {/*    <li className="color" style="background: yellow"/>*/}

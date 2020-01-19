@@ -22,6 +22,7 @@ const ShoesSchema = new Schema(
         images: Array,
         price: String,
         discount: String,
+        gender: Array,
     }
 );
 

@@ -5,8 +5,8 @@ export default function (props) {
     const [count, setCount] = useState(1);
 
     function setCounter(expr){
-        if((count + expr) <= 0){
-            setCount(0)
+        if((count + expr) <= 1){
+            setCount(1)
         }else{
             setCount(count + expr)
         }
